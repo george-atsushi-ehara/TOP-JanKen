@@ -2,10 +2,10 @@
 const options = ["rock", "paper", "scissors"];
 
 //--------------------------------------------
-//Your game is going to play against the computer, 
-//so begin with a function called getComputerChoice
-//that will randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’. 
-//We’ll use this function in the game to make the computer’s play. 
+// Your game is going to play against the computer,
+// so begin with a function called getComputerChoice
+// that will randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’.
+// We’ll use this function in the game to make the computer’s play.
 //--------------------------------------------
 // Computer randomly chooses options
 // Need to have a result for option to go to [2]
@@ -23,7 +23,59 @@ const options = ["rock", "paper", "scissors"];
 // options[0], options[1], and options[2] is now possible
 // return choice will output the selection from the 'options' array
 
-function getComputerChoice(){
+function getComputerChoice() {
   const choice = options[Math.floor(Math.random() * options.length)];
-  return choice
+  return choice;
 }
+
+//-----------------------------------------------------------------------
+// Write a function that plays a single round of Rock Paper Scissors.
+// The function should take two parameters - the playerSelection and
+// computerSelection - and then return a string that declares the
+// winner of the round like so: "You Lose! Paper beats Rock"
+//-----------------------------------------------------------------------
+// Functions a playRound for a single round
+// I need two parameter which is after you create a name for the function
+// Argument the actual input where it goes in the matching parameter name
+// and the playerSelection and computerSelection is the paramater for playRound
+function playRound(playerSelection, computerSelection) {
+  if (playerSelection == computerSelection) {
+    return "Tie";
+  } else if (
+    (playerSelection == "rock" && computerSelection == "scissors") ||
+    (playerSelection == "scissors" && computerSelection == "paper") ||
+    (playerSelection == "paper" && computerSelection == "rock")
+  ) {
+    return "Win";
+  } else {
+    return "Lose";
+  }
+}
+
+//Write a NEW function called game(). Call the playRound function
+//inside of this one to play a 5 round game that keeps score and
+//reports a winner or loser at the end.
+//-----------------------------------------------------------------------
+
+function game() {
+  // Define Initial Score
+  let playerScore = 0;
+  let computerScore = 0;
+
+  for (let i = 0; i < 5; i++) {
+    const playerSelection = prompt("Enter Rock, Paper, or Scissors");
+    const computerSelection = getComputerChoice();
+
+    const result = playRound(playerSelection, computerSelection);
+
+    if (result.includes("win")) {
+      playerScore++;
+    }
+    if (result.includes("lose")) {
+      computerScore++;
+    }
+
+    console.log(result);
+  }
+
+
