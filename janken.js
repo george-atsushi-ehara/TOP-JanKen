@@ -68,14 +68,21 @@ function game() {
 
     const result = playRound(playerSelection, computerSelection);
 
-    if (result.includes("win")) {
+    if (result.includes("Win")) {
       playerScore++;
     }
-    if (result.includes("lose")) {
+    if (result.includes("Lose")) {
       computerScore++;
     }
 
     console.log(result);
   }
 
-
+  if (playerScore > computerScore) {
+    console.log("You win! " + playerScore + " : " + computerScore);
+  } else if (playerScore < computerScore) {
+    console.log("You lose! " + playerScore + " : " + computerScore);
+  } else {
+    console.log("You tie! " + playerScore + " : " + computerScore)
+  }
+}
