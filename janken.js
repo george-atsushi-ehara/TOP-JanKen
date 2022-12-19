@@ -52,6 +52,23 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+//Button Events
+const rockButton = document.querySelector(".rock");
+const paperButton = document.querySelector(".paper");
+const scissorsButton = document.querySelector(".scissors");
+
+rockButton.addEventListener('click', () => {
+  console.log(playRound('rock', getComputerChoice()))
+})
+
+paperButton.addEventListener("click", () => {
+  console.log(playRound("paper", getComputerChoice()));
+});
+
+scissorsButton.addEventListener("click", () => {
+  console.log(playRound("scissors", getComputerChoice()));
+});
+
 //Write a NEW function called game(). Call the playRound function
 //inside of this one to play a 5 round game that keeps score and
 //reports a winner or loser at the end.
@@ -83,6 +100,6 @@ function game() {
   } else if (playerScore < computerScore) {
     console.log("You lose! " + playerScore + " : " + computerScore);
   } else {
-    console.log("You tie! " + playerScore + " : " + computerScore)
+    console.log("You tie! " + playerScore + " : " + computerScore);
   }
 }
