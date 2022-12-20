@@ -1,8 +1,7 @@
 #play {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0px 5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
 }
 .choice {
     font-size: 50px;
