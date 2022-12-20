@@ -1,0 +1,17 @@
+#play {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 5%;
+}
+.choice {
+    font-size: 50px;
+    border: none;
+    background: none;
+}
+
+#result {
+    display: flex;
+    flex-direction: row;
+    justify-items: space-between;
+}

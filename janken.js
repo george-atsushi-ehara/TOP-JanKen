@@ -56,7 +56,7 @@ function playRound(playerSelection, computerSelection) {
 const rockButton = document.querySelector(".rock");
 const paperButton = document.querySelector(".paper");
 const scissorsButton = document.querySelector(".scissors");
-
+console.log(rockButton)
 rockButton.addEventListener('click', () => {
   console.log(playRound('rock', getComputerChoice()))
 })
@@ -103,3 +103,6 @@ function game() {
     console.log("You tie! " + playerScore + " : " + computerScore);
   }
 }
+
+const h3score = document.querySelector(".scoreTitle")
+const h3points = document.createElement('h3')
