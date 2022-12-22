@@ -11,9 +11,11 @@
     <title>じゃんけん</title>
     <script
       type="text/javascript"
-      src="janken.js"
+      src="janken-revisit.js"
       defer></script>
-      <link rel="stylesheet" href="janken.css">
+    <link
+      rel="stylesheet"
+      href="janken.css" />
   </head>
   <body>
     <div id="play">
@@ -21,17 +23,12 @@
       <button class="choice paper">✋</button>
       <button class="choice scissors">✌️</button>
     </div>
-    <div id="result">
-      <h2 class="scoreTitle">Score
-        <div class="name">
-          <p>Player</p>
-          <p>Computer</p>
-          <div class="total-score">
-            <p class="player-score">0</p>
-            <p class="cpu-score">0</p>
-          </div>
-        </div>
-      </h3>
+    <div class="results">
+      <p class="round-result"></p>
+      <p class="match-result"></p>
+      <p class="player-points">Player Points: </p>
+      <p class="cpu-points">Computer Points:  </p>
     </div>
+    <button class="reset">Reset</button>
   </body>
 </html>

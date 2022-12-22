@@ -4,13 +4,20 @@
   width: 250px;
 }
 .choice {
-    font-size: 50px;
-    border: none;
-    background: none;
+  font-size: 50px;
+  border: none;
+  background: none;
 }
 
 #result {
+  display: flex;
+}
+
+.score-title {
     display: flex;
     flex-direction: row;
-    justify-items: space-between;
+}
+
+.reset {
+  display: none;
 }
